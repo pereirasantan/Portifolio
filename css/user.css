@@ -1,0 +1,268 @@
+@font-face{
+  font-family:Poppins-a;
+  src:url("../Poppins/Poppins-Regular.ttf");
+}
+@font-face{
+  font-family:Poppins-b;
+  src:url("../Poppins/Poppins-Bold.ttf");
+}
+*{
+  margin:0;
+  padding:0;
+  border-sizing:border-box;
+}
+body,html{
+  width:100%;
+  height:100vh;
+  scroll-behavior:smooth;
+}
+body{
+  background:#04050F;
+  color:#fff;
+}
+header{
+  position:fixed;
+  top:0;
+  backdrop-filter:blur(20px);
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  width:100%;
+  height:90px;
+  z-index:10;
+}
+header h3{
+  font-weight:bold;
+  margin-left:20px;
+  font-size:1.4rem;
+}
+header nav{
+  display:flex;
+  margin-right:20px;
+}
+header ul{
+  display:flex;
+  align-items:center;
+  list-style:none;
+  gap:20px;
+}
+a{
+  color:#fff;
+  text-decoration:none;
+}
+#hamb{
+  display:none;
+}
+@media(max-width:900px){
+  header{
+    justify-content:space-between;
+  }
+  header ul{
+    display:none;
+  }
+  #hamb{
+    display:block;
+    width:50px;
+  }
+  header h3{
+    font-size:2.1rem;
+  }
+}
+#ladding-page{
+  display:flex;
+  width:100%;
+  height:50vh;
+}
+.flex{
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  width:100%;
+  height:40vh;
+}
+.introdução article{
+  position:relative;
+  top:200px;
+  left:70px;
+}
+.introdução article h1{
+  font-size:3.5rem;
+  margin-bottom:10px;
+}
+.introdução article p{
+  color:#606272;
+  font-size:2rem;
+  margin-bottom:10px;
+}
+.introdução article .btn_contato{
+  padding:13px;
+  border:none;
+  font-size:1rem;
+  font-weight:bold;
+  background:#42445A;
+  color:#fff;
+  margin-top:20px;
+  border-radius:0px 20px 0px 20px;
+  border:solid 2px black;
+  
+}
+#sobre-mim,#projetos{
+  flex-direction:column;
+  text-align:center;
+}
+.flex h2{
+  font-size:2.5rem;
+  font-weight:bold;
+  margin-bottom:30px;
+}
+.flex > div{
+  margin:0px;
+}
+.flex p{
+  color:#42445A;
+}
+@media(max-width:900px){
+  #ladding-page{
+   height:100vh;
+   margin:50px 0px 100px 0px;
+  }
+  .flex{
+    text-align:center;
+    height:100vh;
+  }
+  .introdução article{
+  top:90px;
+  left:40px;
+}
+.introdução article h1{
+  font-size:4rem;
+}
+.introdução article p{
+  font-size:1.6rem;
+}
+.introdução article .btn_contato{
+  position:relative;
+  left:70px;
+  top:50px;
+  font-size:1.4rem;
+  margin-top:15px;
+}
+}
+#contato{
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  margin-top:60px;
+}
+#contato > div > div{
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  width:100px;
+  height:100px;
+  background:#12131B;
+  border-radius:50%;
+  margin:20px 0px;
+}
+#contato > div{
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  justify-content:center;
+  margin:20px 0px;
+}
+.emoji > img{
+  color:#fff;
+  width:50px;
+  margin-bottom:0px 0px;
+}
+#contato > div >  h4{
+  font-size:2rem;
+  font-weight:bold;
+  margin:10px 0px;
+}
+#contato  p{
+  font-size:1.3rem;
+}
+#projetos{
+  margin:300px 0px 0px 0px;
+  height:100%;
+}
+.container{
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  margin:0px 20px;
+  gap:40px;
+  flex-wrap:wrap;
+}
+.container > .items{
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  align-items:center;
+  flex:1 1 300px;
+  width:70%;
+  height:250px;
+  background:#12131B;
+  padding:10px;
+}
+.quadro{
+  display:block;
+  width:90%;
+  height:200px;
+  background:black;
+  margin-top:20px;
+}
+.items h4{
+  font-size:1.5rem;
+  margin:10px 0px;
+  margin:20px 0px;
+}
+.items p{
+  font-size:1rem;
+  color:#3D3F52;
+}
+/*Serviços*/
+#serviços{
+  flex-direction:column;
+  gap:30px;
+  margin-top:100px;
+}
+#serviços > div{
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  justify-content:space-around;
+  background:#1214268F;
+  flex:1 1 200px;
+  width:60%;
+  height:200px;
+  border-bottom:solid 4.5px #151F8DC2;
+  border-radius:10px;
+}
+.serviço-img{
+  width:60px;
+}
+#serviços > div > h5{
+  font-size:1.2rem;
+  font-family:'Poppins-a';
+  color:#fff;
+}
+#serviços > div:hover{
+  background:#22232F;
+  border-color:transparent;
+}
+/*Rodape do portifolio*/
+footer{
+  display:flex;
+  justify-content:center;
+  font-family:"Poppins-a";
+  align-items:center;
+  height:40px;
+  width:100%;
+  background:#22232FB5;
+  font-size:.9rem;
+  color:#A3A5BBA1;
+  margin-top:100px;
+}
