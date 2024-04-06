@@ -21,9 +21,6 @@ body{
   color:#fff;
 }
 header{
-  position:fixed;
-  top:0;
-  backdrop-filter:blur(20px);
   display:flex;
   justify-content:space-between;
   align-items:center;
