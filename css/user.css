@@ -1,11 +1,5 @@
-@font-face{
-  font-family:Poppins-a;
-  src:url("../Poppins/Poppins-Regular.ttf");
-}
-@font-face{
-  font-family:Poppins-b;
-  src:url("../Poppins/Poppins-Bold.ttf");
-}
+@import url('https://fonts.googleapis.com/css2?family=Dosis:wght@200..800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+
 *{
   margin:0;
   padding:0;
@@ -18,9 +12,12 @@ body,html{
 }
 body{
   background:#04050F;
+  font-family:"Poppins",sans-serif;
   color:#fff;
 }
 header{
+  position:fixed;
+  top:0;
   display:flex;
   justify-content:space-between;
   align-items:center;
@@ -53,13 +50,48 @@ a{
 @media(max-width:900px){
   header{
     justify-content:space-between;
+    background:#0D0D14;
   }
+  /*Navegação pelo navbar-flex*/
   header ul{
     display:none;
+    width:100%;
+    text-align:center;
+    z-index:200;
+  }
+  ul>li{
+    padding:0px;
+  }
+  a{
+    display:block;
+    width:100%;
+    height:40px;
+    padding:10px;
+  }
+  a:hover{
+    text-decoration:underline;
+  }
+  nav{
+    display:none;
+  }
+  /*Estilização adicionada ao nav por js*/
+  .addMenu{
+    position:fixed;
+    display:block;
+    top:90px;
+    left:0;
+    width:100%;
+    background:#0D0D14;
+    z-index:10;
+    border-radius:0px 0px 50% 50%;
+    transition:.3s;
   }
   #hamb{
+    position:absolute;
+    right:20px;
     display:block;
     width:50px;
+    
   }
   header h3{
     font-size:2.1rem;
@@ -79,7 +111,7 @@ a{
 }
 .introdução article{
   position:relative;
-  top:200px;
+  top:170px;
   left:70px;
 }
 .introdução article h1{
@@ -107,6 +139,9 @@ a{
   flex-direction:column;
   text-align:center;
 }
+#sobre-mim {
+  margin-top:200px;
+}
 .flex h2{
   font-size:2.5rem;
   font-weight:bold;
@@ -128,7 +163,7 @@ a{
     height:100vh;
   }
   .introdução article{
-  top:90px;
+  top:70px;
   left:40px;
 }
 .introdução article h1{
@@ -182,7 +217,7 @@ a{
   font-size:1.3rem;
 }
 #projetos{
-  margin:300px 0px 0px 0px;
+  margin-top:350px;
   height:100%;
 }
 .container{
@@ -198,9 +233,9 @@ a{
   flex-direction:column;
   justify-content:center;
   align-items:center;
-  flex:1 1 300px;
-  width:70%;
-  height:250px;
+  flex:0 0 300px;
+  width:60%;
+  height:300px;
   background:#12131B;
   padding:10px;
 }
@@ -222,9 +257,12 @@ a{
 }
 /*Serviços*/
 #serviços{
-  flex-direction:column;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  flex-wrap:wrap;
   gap:30px;
-  margin-top:100px;
+  margin:100px 30px 0px 30px;
 }
 #serviços > div{
   display:flex;
@@ -233,7 +271,7 @@ a{
   justify-content:space-around;
   background:#1214268F;
   flex:1 1 200px;
-  width:60%;
+  width:200px;
   height:200px;
   border-bottom:solid 4.5px #151F8DC2;
   border-radius:10px;
@@ -243,7 +281,7 @@ a{
 }
 #serviços > div > h5{
   font-size:1.2rem;
-  font-family:'Poppins-a';
+  font-weight:400;
   color:#fff;
 }
 #serviços > div:hover{
@@ -254,7 +292,7 @@ a{
 footer{
   display:flex;
   justify-content:center;
-  font-family:"Poppins-a";
+  font-weight:400;
   align-items:center;
   height:40px;
   width:100%;
